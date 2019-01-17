@@ -1,0 +1,62 @@
+﻿@model VesselBlenders.Models.Login
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/js/bootstrap.js" />
+    <link rel="stylesheet" type="text/css" href="~/css/LoginStyle.css" />
+    <title>Vessel Blenders - Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-5">
+
+                <div>
+                    <img src="~/images/vessel-blenders-logo.png" class="img-circle center-block" alt="Cinque Terre" width="79" height="79">
+                </div>
+
+                <h3 class="text-center">Login</h3>
+
+                <form method="post" asp-action="index" asp-antiforgery="true">
+                    <input asp-for="Username" type="email" class="form-control" placeholder="john@uhcl.edu" required/>
+                    <span asp-validation-for="Username" class="text-danger"></span><br /><br />
+
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" required/>
+                    <span asp-validation-for="Password" class="text-danger"></span><br /><br />
+
+                    <button type="submit" class="btn btn-danger">Login</button>
+                    <br />
+                    <h4 class="text-center text-danger" style="text-shadow:0.5px 0.5px #ffffff">@ViewBag.error</h4>
+                    <a href="#"><p class="text-center">Forget Password</p></a>
+                    <!--<hr />
+                    <h3 class="text-center">Not A Member Yet</h3>
+                    <a href="#"><div class="btn btn-info">SIGN UP</div></a>-->
+                </form>
+                
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

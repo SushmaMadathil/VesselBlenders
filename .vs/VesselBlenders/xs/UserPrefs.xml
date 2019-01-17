@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{49374EA8-5578-4B9A-81D2-E5AA360108B3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LoginController.cs">
+    <Files>
+      <File FileName="Views/Login/Calculation.cshtml" Line="1" Column="1" />
+      <File FileName="Models/Login.cs" Line="7" Column="3" />
+      <File FileName="Models/Channelcs.cs" Line="7" Column="48" />
+      <File FileName="Views/Login/GetDetails.cshtml" Line="121" Column="1" />
+      <File FileName="Controllers/LoginController.cs" Line="46" Column="1" />
+      <File FileName="Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/_CoordinatorLayout.cshtml" Line="206" Column="77" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VesselBlenders" expanded="True">
+            <Node name="VesselBlenders" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="LoginController.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Login" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/rishikareddy/Desktop/VesselBlenders/VesselBlenders/Models/VesselBlenderContext.cs" relfile="Models/VesselBlenderContext.cs" line="28" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.VesselBlenders PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

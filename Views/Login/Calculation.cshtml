@@ -1,0 +1,155 @@
+﻿@model VesselBlenders.Models.EmployeeIncentive
+@{ 
+    Layout = "_CoordinatorLayout";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Employee Incentive</h2>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<form asp-action="Calculation" method="post">
+	<div class="row">
+		<div class="col-md-12">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="SNo" class="control-label"></label>
+                <input asp-for="SNo" class="form-control" />
+                <span asp-validation-for="SNo" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="total_incentive_days" class="control-label"></label>
+                <input asp-for="total_incentive_days" class="form-control" />
+                <span asp-validation-for="total_incentive_days" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+    <div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="days_of_bth" class="control-label"></label>
+                <input asp-for="days_of_bth" class="form-control" />
+                <span asp-validation-for="days_of_bth" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="pto_days" class="control-label"></label>
+                <input asp-for="pto_days" class="form-control" />
+                <span asp-validation-for="pto_days" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="meals_allowance" class="control-label"></label>
+                <input asp-for="meals_allowance" class="form-control" />
+                <span asp-validation-for="meals_allowance" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="Transportation_allowance" class="control-label"></label>
+                <input asp-for="Transportation_allowance" class="form-control" />
+                <span asp-validation-for="Transportation_allowance" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="monthlycellphonerate" class="control-label"></label>
+                <input asp-for="monthlycellphonerate" class="form-control" />
+                <span asp-validation-for="monthlycellphonerate" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="flatratetravel" class="control-label"></label>
+                <input asp-for="flatratetravel" class="form-control" />
+                <span asp-validation-for="flatratetravel" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="others" class="control-label"></label>
+                <input asp-for="others" class="form-control" />
+                <span asp-validation-for="others" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="incentivedaysfromptodays" class="control-label"></label>
+                <input asp-for="incentivedaysfromptodays" class="form-control" />
+                <span asp-validation-for="incentivedaysfromptodays" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="grandtotal" class="control-label"></label>
+                <input asp-for="grandtotal" class="form-control" />
+                <span asp-validation-for="grandtotal" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="incentivemultipliertill10" class="control-label"></label>
+                <input asp-for="incentivemultipliertill10" class="form-control" />
+                <span asp-validation-for="incentivemultipliertill10" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="incentivemultipliertill11to15" class="control-label"></label>
+                <input asp-for="incentivemultipliertill11to15" class="form-control" />
+                <span asp-validation-for="incentivemultipliertill11to15" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="incentivemultiplier16plus" class="control-label"></label>
+                <input asp-for="incentivemultiplier16plus" class="form-control" />
+                <span asp-validation-for="incentivemultiplier16plus" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="hourincentiverate" class="control-label"></label>
+                <input asp-for="hourincentiverate" class="form-control" />
+                <span asp-validation-for="hourincentiverate" class="text-danger"></span>
+            </div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+                <label asp-for="flatdayrate" class="control-label"></label>
+                <input asp-for="flatdayrate" class="form-control" />
+                <span asp-validation-for="flatdayrate" class="text-danger"></span>
+            </div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-12">
+			<div class="form-group">
+                <input type="submit" value="Create" class="btn btn-info" />
+            </div>
+		</div>
+	</div>       
+</form>
+

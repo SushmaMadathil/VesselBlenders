@@ -1,0 +1,115 @@
+﻿@model VesselBlenders.Models.EmployeeIncentive
+@{
+    Layout = "_CoordinatorLayout";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Monthly Incentive,Allowance & Reimbursements Summary</h2>
+    </div>
+    <!-- /.col-lg-12 -->
+    <div class="col-lg-12">
+        <h3>Vessel Attendence Incentive</h3>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="GetDetails" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="total_incentive_days" class="control-label"></label>
+                    <input asp-for="total_incentive_days" class="form-control" />
+                    <span asp-validation-for="total_incentive_days" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <table border="1">
+                        <tr>
+                            <td>Incentive Tiers(DaysEarned)</td>
+                            <td>Incentive Multiplier</td>
+                            <td>24 Hr Incentive Rate</td>
+                            <td>Your Incentive PayEarned by Tier</td>
+                        </tr>
+                        <tr>
+                            <td>1-10</td>
+                            <td>@Model.incentivemultipliertill10</td>
+                            <td>@Model.hourincentiverate</td>
+                            <td>@Model.output1</td>
+                            <td>@Model.output4 </td>
+                        <tr>
+                            <td>11-15</td>
+                            <td>@Model.incentivemultipliertill11to15</td>
+                            <td>@Model.hourincentiverate</td>
+                            <td>@Model.output2</td>
+                            <td>@Model.output5</td>
+                        </tr>
+                        <tr>
+                            <td>16+</td>
+                            <td>@Model.incentivemultiplier16plus</td>
+                            <td>@Model.hourincentiverate</td>
+                            <td>@Model.output3</td>
+                            <td>@Model.output6</td>
+                        </tr>
+                    </table>
+                    <label asp-for="days_of_bth" class="control-label"></label>
+                    <input asp-for="days_of_bth" class="form-control" />
+                    <span asp-validation-for="days_of_bth" class="text-danger"></span>
+                </div>
+                <p> Flat Day Rate               @Model.flatdayrate  </p>
+                <p> BUCKEY TEXAS HUB BONUS  @Model.output9</p>
+                <p><bold>TOTAL VESSEL ATTENDENCE INCENTIVE     @Model.output10</bold> </p>
+                <p><bold>Meals and Transportation Allowance</bold> </p>
+                <p><b>Your Total Incentive Days Earned</b>  @Model.total_incentive_days</p>
+
+                <table border="1">
+                    <tr> <td> Category </td>  <td> 24 Hr Allowance  </td>  <td> Allowance Pay Earned</td>    </tr>
+                    <tr> <td> Meals </td>  <td>@Model.meals_allowance </td> <td>@Model.output12 </td>   </tr>
+                    <tr> <td> Transportation(Local) </td> <td> @Model.Transportation_allowance </td> <td>@Model.output13</td> </tr>
+                    <tr> <td>Total meals and transportation Allowance </td>  <td>@Model.output14</td>    </tr>
+                </table>
+                <p><bold>BENEFITS &REIMBURSEMENTS</bold></p>
+                <table border="1">
+                    <tr>
+                        <td>Description</td>
+                        <td>Amount</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Cell Phone & Data</td>
+                        <td>@Model.monthlycellphonerate</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label asp-for="flatratetravel" class="control-label"></label>
+                                <input asp-for="flatratetravel" class="form-control" />
+                                <span asp-validation-for="flatratetravel" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label asp-for="others" class="control-label"></label>
+                                <input asp-for="others" class="form-control" />
+                                <span asp-validation-for="others" class="text-danger"></span>
+                            </div>
+                        </td>
+                </table>
+                <p> <b>Total Benefit &Reimbursements </b>  @Model.output11 </p>
+                <b> Paid Time Off Benefit </b>
+                <div class="form-group">
+                    <label asp-for="pto_days" class="control-label"></label>
+                    <input asp-for="pto_days" class="form-control" />
+                    <span asp-validation-for="pto_days" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="incentivedaysfromptodays" class="control-label"></label>
+                    <input asp-for="incentivedaysfromptodays" class="form-control" />
+                    <span asp-validation-for="incentivedaysfromptodays" class="text-danger"></span>
+                </div>
+                <p bgcolor="yellow">Grand Total   : @Model.output15 </p>
+                <div class="form-group">
+                    <input type="submit" value="Generate Total" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
